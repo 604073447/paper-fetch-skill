@@ -177,7 +177,7 @@ class FetchStrategyInput(BaseModel):
 
     allow_metadata_only_fallback: bool = True
     preferred_providers: list[str] | None = None
-    asset_profile: str | None = None
+    asset_profile: str | None = "all"
     inline_image_budget: InlineImageBudgetInput | None = None
 
     @field_validator("preferred_providers", mode="before")
